@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import "font-awesome/css/font-awesome.min.css";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Merriweather;
+  background-color: #242424;
+}
+h1 {
+  display: inline-block;
+  animation: glow 20s ease-in-out infinite; /* Animates the glow over 30 seconds */
+}
+.selectCountryLabel {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+.selectCountry {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 22%;
+}
+.selectCountryOptions {
+  font-size: 1.5rem;
+}
+.selectCountry:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+.chosenCountry {
+  font-size: 2.3rem;
+}
+.scoreTitle {
+  font-size: 2rem;
+}
+.questionsBankNumber {
+  font-size: 1.5rem;
+}
+.fullQuestion {
+  font-size: 1.8rem;
+}
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+button {
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+  font-family: cursive;
+}
+button:hover {
+  background-color: #4c00ff;
+  color: white;
+  font-weight: bolder;
+}
+.correct-answer {
+  background-color: lightgreen;
+  color: black;
+  font-weight: bold;
+}
+.correct-answer::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+.incorrect-answer {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.incorrect-answer::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+.isCorrectAnswer {
+  font-size: 2.5rem;
+}
+.answerExplanation {
+  font-size: 1.7rem;
+}
+.finalScoresTitle {
+  font-size: 2rem;
+}
+/* Navbar is here */
+
+/* Navbar.css */
+.navbar {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.logo-container {
+  overflow: hidden;
+  width: 60%; /* Adjust width as per your logo size */
+  display: inline-block;
+}
+.logo {
+  max-width: 60%;
+  animation: slideIn 2s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.navbar-title {
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+  padding-left: 5rem;
+  display: inline;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: none; /* No shadow at the start */
+  }
+  50% {
+    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+      #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px,
+      #ff2d95 0px 0px 50px, #ff2d95 0px 0px 75px; /* Full glow at 50% */
+  }
+  100% {
+    text-shadow: none; /* Return to normal text at the end */
+  }
+}
