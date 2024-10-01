@@ -9,9 +9,12 @@
   font-family: Merriweather;
   background-color: #242424;
 }
-h1 {
+/* H1 title settings */
+.chosenCountry {
   display: inline-block;
   animation: glow 20s ease-in-out infinite; /* Animates the glow over 30 seconds */
+  font-size: 4rem;
+  margin-bottom: -1rem;
 }
 .selectCountryLabel {
   font-size: 2rem;
@@ -29,9 +32,6 @@ h1 {
 .selectCountry:hover {
   font-weight: 600;
   cursor: pointer;
-}
-.chosenCountry {
-  font-size: 2.3rem;
 }
 .scoreTitle {
   font-size: 2rem;
@@ -110,6 +110,7 @@ button:hover {
   overflow: hidden;
   width: 60%; /* Adjust width as per your logo size */
   display: inline-block;
+  margin-top: 1rem;
 }
 .logo {
   max-width: 60%;
