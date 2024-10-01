@@ -126,16 +126,19 @@ function App() {
 
   useEffect(() => {
     if (showResult) {
-      if (score === countriesData[selectedCountry].questions.length) {
-        playEffect("/sounds/game-win.mp3");
-      } else {
-        playEffect("/sounds/lose-sound.mp3");
+      const totalQuestions = countriesData[selectedCountry].questions.length;
+      const percentageScore = (score / totalQuestions) * 100; // Calculate percentage
+
+      if (percentageScore > 80) {
+        playEffect("/sounds/game-win.mp3"); // Play win sound for > 80%
+      } else if (percentageScore < 50) {
+        playEffect("/sounds/lose-sound.mp3"); // Play lose sound for < 50%
       }
     }
   }, [showResult, score, selectedCountry]);
 
   return (
-    <div>
+    <div className="container">
       {/* Navbar component */}
       <Navbar />
       <label className="selectCountryLabel">Select a Country: </label>
@@ -212,12 +215,20 @@ function App() {
           </div>
           {userAnswer && (
             <div>
-              <p className="isCorrectAnswer">
+              <p
+                className={
+                  userAnswer ===
+                  countriesData[selectedCountry].questions[currentQuestionIndex]
+                    .correctAnswer
+                    ? "correct-answer-p" // Apply class for correct answer
+                    : "incorrect-answer-p"
+                } // Apply class for incorrect answer
+              >
                 {userAnswer ===
                 countriesData[selectedCountry].questions[currentQuestionIndex]
                   .correctAnswer
-                  ? "Correct!"
-                  : "Wrong!"}
+                  ? "Correct!" // Text for correct answer
+                  : "Wrong!"}{" "}
               </p>
               <p className="answerExplanation">
                 Explanation:{" "}
