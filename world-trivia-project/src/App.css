@@ -13,6 +13,9 @@ h1 {
   display: inline-block;
   animation: glow 20s ease-in-out infinite; /* Animates the glow over 30 seconds */
 }
+.chosenCountry {
+  font-size: 4rem;
+}
 .selectCountryLabel {
   font-size: 2rem;
   margin: 0 0.5rem;
@@ -30,9 +33,7 @@ h1 {
   font-weight: 600;
   cursor: pointer;
 }
-.chosenCountry {
-  font-size: 2.3rem;
-}
+
 .scoreTitle {
   font-size: 2rem;
 }
@@ -114,6 +115,7 @@ button:hover {
 .logo {
   max-width: 60%;
   animation: slideIn 2s ease-in-out;
+  margin-top: 1rem;
 }
 @keyframes slideIn {
   from {
