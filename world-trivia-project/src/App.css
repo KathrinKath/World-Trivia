@@ -9,12 +9,21 @@
   font-family: Merriweather;
   background-color: #242424;
 }
-/* H1 title settings */
-.chosenCountry {
+
+.container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 3rem;
+  background-color: #4b4a4a;
+  padding: 2rem;
+}
+h1 {
   display: inline-block;
-  animation: glow 20s ease-in-out infinite; /* Animates the glow over 30 seconds */
+  animation: glow 20s ease-in-out infinite; /* Animates the glow over 20 seconds */
+}
+.chosenCountry {
   font-size: 4rem;
-  margin-bottom: -1rem;
 }
 .selectCountryLabel {
   font-size: 2rem;
@@ -25,6 +34,7 @@
   padding: 0.5rem;
   border-radius: 1rem;
   width: 22%;
+  margin: 1rem 0;
 }
 .selectCountryOptions {
   font-size: 1.5rem;
@@ -33,6 +43,7 @@
   font-weight: 600;
   cursor: pointer;
 }
+
 .scoreTitle {
   font-size: 2rem;
 }
@@ -68,22 +79,21 @@ button:hover {
   color: black;
   font-weight: bold;
 }
-.correct-answer::before {
-  content: "\f00c";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 0.5rem;
-}
 .incorrect-answer {
   background-color: red;
   color: white;
   font-weight: bold;
 }
-.incorrect-answer::before {
-  content: "\f00d";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-right: 0.5rem;
+.correct-answer-p,
+.incorrect-answer-p {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.correct-answer-p {
+  color: lightgreen; /* Color for correct answer */
+}
+.incorrect-answer-p {
+  color: red; /* Color for incorrect answer */
 }
 .isCorrectAnswer {
   font-size: 2.5rem;
@@ -104,17 +114,23 @@ button:hover {
   padding: 1rem;
   border-radius: 2rem;
   text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .logo-container {
   overflow: hidden;
-  width: 60%; /* Adjust width as per your logo size */
+  width: 80%; /* Adjust width as per your logo size */
   display: inline-block;
-  margin-top: 1rem;
+  border-radius: 1rem;
 }
 .logo {
-  max-width: 60%;
+  width: 100%;
+  height: 15rem;
   animation: slideIn 2s ease-in-out;
+  margin-top: 1rem;
+  border: #0a021d solid 3px;
 }
 @keyframes slideIn {
   from {
