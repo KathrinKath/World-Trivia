@@ -30,6 +30,7 @@ function App() {
     const audio = new Audio(soundFile);
     audio.play();
   };
+
   function handleCountryChange(e) {
     setSelectedCountry(e.target.value);
     setCurrentQuestionIndex(0);
@@ -62,7 +63,8 @@ function App() {
       } else {
         setShowResult(true); // End the game and show the final score
       }
-    }, 10000); // 10 seconds delay so the user can see the correct answers explanation.
+    }, 10000); // 10 seconds delay so the user can see the correct answer explanation.
+
   }
   function triggerConfetti() {
     const canvas = document.createElement('canvas');
@@ -80,18 +82,18 @@ function App() {
       ticks: 60,
       gravity: 0.3,
       colors: [
-        '#ff0',
-        '#0f0',
-        '#00f',
-        '#f00',
-        '#FF00FF',
-        '#00FFFF',
-        '#ff0',
-        '#0f0',
-        '#00f',
-        '#f00',
-        '#FF00FF',
-        '#00FFFF',
+        "#ff0",
+        "#0f0",
+        "#00f",
+        "#f00",
+        "#ff00ff",
+        "#00ffff",
+        "#ff0",
+        "#0f0",
+        "#00f",
+        "#f00",
+        "#ff00ff",
+        "#00ffff",
       ],
     });
     setTimeout(() => {
@@ -106,6 +108,7 @@ function App() {
     setClicked(false);
     resetTimer(); // Reset the timer when restarting
   }
+
   // Play sound effect when userAnswer changes
   useEffect(() => {
     if (userAnswer) {
@@ -174,6 +177,7 @@ function App() {
                 .question
             }
           </h2>
+
           <div className="options-grid">
             {countriesData[selectedCountry].questions[
               currentQuestionIndex
@@ -200,6 +204,7 @@ function App() {
               );
             })}
           </div>
+
           {userAnswer && (
             <div>
               <p
