@@ -56,17 +56,17 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 
 ## 🎮 How to Play
 
-![Open Screen](./src/images/Trivia-OpenScreen.png)
+![Open Screen](./world-trivia-project/src/images/Trivia-OpenScreen.png)
 
 ### Select a country:
 
 - Use the dropdown menu to choose a country.
-  ![Open Screen](./src/images/Trivia-SelectingCountry.png)
+  ![Open Screen](./world-trivia-project/src/images/Trivia-SelectingCountry.png)
 
 ### Answer questions:
 
 - For each trivia question, click on one of the four answer options.
-  ![Open Screen](./src/images/Trivia-MultipleChoiceQuestions.png)
+  ![Open Screen](./world-trivia-project/src/images/Trivia-MultipleChoiceQuestions.png)
 
 ### Check your result:
 
@@ -74,11 +74,11 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 
 ### Correct Answer
 
-![Open Screen](./src/images/Trivia-CorrectAnswer.png)
+![Open Screen](./world-trivia-project/src/images/Trivia-CorrectAnswer.png)
 
 ### Incorrect Answer
 
-![Open Screen](./src/images/Trivia-WrongAnswer.png)
+![Open Screen](./world-trivia-project/src/images/Trivia-WrongAnswer.png)
 
 ### Keep track of time:
 
@@ -87,12 +87,12 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 ### Celebrate success:
 
 - If you answer correctly, a confetti effect will appear on your screen to celebrate!
-  ![Open Screen](./src/images/Trivia-Confetti.png)
+  ![Open Screen](./world-trivia-project/src/images/Trivia-Confetti.png)
 
 ### End of game:
 
 - After all the questions, the game will display your score. You can either play again or select a different country to test your knowledge further.
-  ![Open Screen](./src/images/Trivia-EndGame.png)
+  ![Open Screen](./world-trivia-project/src/images/Trivia-EndGame.png)
 
 ## 💻 Technical Details
 
@@ -107,3 +107,7 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 ## 🎓 Creators And Contributing
 
 The Game was programmed and designed by **Gerardo Michele Mussuto**, **Fardin Azimi** and **Kathrin Peled**.
+
+- [Kathrin Peled](https://draculady.de/)
+- [Gerardo Michele Mussuto](https://onid89.github.io/Web-Dev-Portfolio/)
+- [Fardin Azimi](https://fardinazimi.github.io/FardinsPortfolio/)
