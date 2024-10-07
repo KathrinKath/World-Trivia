@@ -129,9 +129,8 @@ function App() {
       if (percentageScore > 80) {
         playSound('/sounds/game-win.mp3'); // Play win sound for > 80%
       } else if (percentageScore < 50) {
-        playSound('/sounds/lose-sound.mp3'); // Play lose sound for >= 50%
-      } else percentageScore >= 50;
-      playSound('/sounds/keep-playing.wav'); // Play lose sound for < 50%
+        playSound('/sounds/lose-sound.mp3');
+      } else playSound('/sounds/keep-playing.wav'); // Play lose sound for < 50%
     }
   }, [showResult, score, selectedCountry]);
   return (
