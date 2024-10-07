@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import confetti from "canvas-confetti"; // Import the confetti library
-import { countriesData } from "./Data/countriesData";
-import "./App.css";
-import "font-awesome/css/font-awesome.min.css"; // Import Font Awesome
-import Navbar from "../src/Components/navbar"; // Import the Navbar component
-import useTimer from "./Components/useTimer"; // Import the Timer (Test)
+import { useState, useEffect } from 'react';
+import confetti from 'canvas-confetti'; // Import the confetti library
+import { countriesData } from './Data/countriesData';
+import './App.css';
+import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome
+import Navbar from '../src/Components/navbar'; // Import the Navbar component
+import useTimer from './Components/useTimer'; // Import the Timer (Test)
 function App() {
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState('');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
-  const [userAnswer, setUserAnswer] = useState("");
+  const [userAnswer, setUserAnswer] = useState('');
   const [clicked, setClicked] = useState(false);
   const countries = Object.keys(countriesData);
   // Callback for when the timer runs out
@@ -35,7 +35,7 @@ function App() {
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResult(false);
-    setUserAnswer("");
+    setUserAnswer('');
     setClicked(false);
     resetTimer(); // Reset timer when a new country is selected
   }
@@ -51,7 +51,7 @@ function App() {
     }
     setUserAnswer(option);
     setTimeout(function () {
-      setUserAnswer("");
+      setUserAnswer('');
       setClicked(false);
       if (
         currentQuestionIndex <
@@ -65,14 +65,14 @@ function App() {
     }, 10000); // 10 seconds delay so the user can see the correct answers explanation.
   }
   function triggerConfetti() {
-    const canvas = document.createElement("canvas");
-    const container = document.getElementById("confetti-container");
+    const canvas = document.createElement('canvas');
+    const container = document.getElementById('confetti-container');
     canvas.width = 600;
     canvas.height = 600;
     container.appendChild(canvas);
     const confettiInstance = confetti.create(canvas, {
       resize: true,
-      useWorker: true
+      useWorker: true,
     });
     confettiInstance({
       spread: 160,
@@ -80,26 +80,26 @@ function App() {
       ticks: 60,
       gravity: 0.3,
       colors: [
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#FF00FF",
-        "#00FFFF",
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#FF00FF",
-        "#00FFFF"
-      ]
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#FF00FF',
+        '#00FFFF',
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#FF00FF',
+        '#00FFFF',
+      ],
     });
     setTimeout(() => {
       container.removeChild(canvas);
     }, 2000); // Remove canvas after 2 seconds
   }
   function handleRestart() {
-    setSelectedCountry("");
+    setSelectedCountry('');
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResult(false);
@@ -114,9 +114,9 @@ function App() {
         countriesData[selectedCountry].questions[currentQuestionIndex]
           .correctAnswer
       ) {
-        playSound("/sounds/win.mp3"); // Correct sound file path
+        playSound('/sounds/win.mp3'); // Correct sound file path
       } else {
-        playSound("/sounds/error.mp3"); // Wrong sound file path
+        playSound('/sounds/error.mp3'); // Wrong sound file path
       }
     }
   }, [userAnswer, selectedCountry, currentQuestionIndex]);
@@ -127,10 +127,10 @@ function App() {
       const percentageScore = (score / totalQuestions) * 100; // Calculate percentage
 
       if (percentageScore > 80) {
-        playSound("/sounds/game-win.mp3"); // Play win sound for > 80%
+        playSound('/sounds/game-win.mp3'); // Play win sound for > 80%
       } else if (percentageScore < 50) {
-        playSound("/sounds/lose-sound.mp3"); // Play lose sound for < 50%
-      }
+        playSound('/sounds/lose-sound.mp3'); // Play sound with 50% point
+      } else playSound('/sounds/keep-playing.wav'); // Play lose sound for < 50%
     }
   }, [showResult, score, selectedCountry]);
   return (
@@ -149,26 +149,26 @@ function App() {
         {countries.map(function (country) {
           return (
             <option key={country} value={country}>
-              {country.replace(/_/g, " ")}
+              {country.replace(/_/g, ' ')}
             </option>
           );
         })}
       </select>
-      <div id="confetti-container" style={{ position: "relative" }}></div>{" "}
+      <div id="confetti-container" style={{ position: 'relative' }}></div>{' '}
       {/* Container for confetti */}
       {selectedCountry && !showResult && (
         <div>
           <h1 className="chosenCountry">
-            {selectedCountry.replace(/_/g, " ")} Trivia
+            {selectedCountry.replace(/_/g, ' ')} Trivia
           </h1>
           <h3 className="timer">Time Left: {timeLeft} seconds</h3>
           <h3 className="scoreTitle">Score: {score}</h3>
           <h3 className="questionsBankNumber">
-            Question {currentQuestionIndex + 1} of{" "}
+            Question {currentQuestionIndex + 1} of{' '}
             {countriesData[selectedCountry].questions.length}
           </h3>
           <h2 className="fullQuestion">
-            Question {currentQuestionIndex + 1}:{" "}
+            Question {currentQuestionIndex + 1}:{' '}
             {
               countriesData[selectedCountry].questions[currentQuestionIndex]
                 .question
@@ -185,9 +185,9 @@ function App() {
               const buttonClass =
                 clicked && userAnswer
                   ? isCorrect
-                    ? "correct-answer"
-                    : "incorrect-answer"
-                  : "";
+                    ? 'correct-answer'
+                    : 'incorrect-answer'
+                  : '';
               return (
                 <button
                   key={option}
@@ -207,18 +207,18 @@ function App() {
                   userAnswer ===
                   countriesData[selectedCountry].questions[currentQuestionIndex]
                     .correctAnswer
-                    ? "correct-answer-p" // Apply class for correct answer
-                    : "incorrect-answer-p"
+                    ? 'correct-answer-p' // Apply class for correct answer
+                    : 'incorrect-answer-p'
                 } // Apply class for incorrect answer
               >
                 {userAnswer ===
                 countriesData[selectedCountry].questions[currentQuestionIndex]
                   .correctAnswer
-                  ? "Correct!" // Text for correct answer
-                  : "Wrong!"}{" "}
+                  ? 'Correct!' // Text for correct answer
+                  : 'Wrong!'}{' '}
               </p>
               <p className="answerExplanation">
-                Explanation:{" "}
+                Explanation:{' '}
                 {
                   countriesData[selectedCountry].questions[currentQuestionIndex]
                     .explanation
@@ -231,7 +231,7 @@ function App() {
       {showResult && (
         <div className="finaleScore">
           <h2 className="finalScoresTitle">
-            Your Score: {score} /{" "}
+            Your Score: {score} /{' '}
             {countriesData[selectedCountry].questions.length}
           </h2>
           <button onClick={handleRestart}>
