@@ -13,6 +13,7 @@ footer {
   flex-direction: column;
   margin-top: 200px;
   box-sizing: border-box;
+  bottom: -10rem;
 }
 
 footer .social_icon,
