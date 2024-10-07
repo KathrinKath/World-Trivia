@@ -64,7 +64,6 @@ function App() {
         setShowResult(true); // End the game and show the final score
       }
     }, 10000); // 10 seconds delay so the user can see the correct answer explanation.
-
   }
   function triggerConfetti() {
     const canvas = document.createElement('canvas');
@@ -82,18 +81,18 @@ function App() {
       ticks: 60,
       gravity: 0.3,
       colors: [
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#ff00ff",
-        "#00ffff",
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#ff00ff",
-        "#00ffff",
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#ff00ff',
+        '#00ffff',
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#ff00ff',
+        '#00ffff',
       ],
     });
     setTimeout(() => {
@@ -133,7 +132,7 @@ function App() {
         playSound('/sounds/game-win.mp3'); // Play win sound for > 80%
       } else if (percentageScore < 50) {
         playSound('/sounds/lose-sound.mp3'); // Play sound with 50% point
-      } else playSound('/sounds/keep-playing.wav'); // Play lose sound for < 50%
+      } else playSound('/sounds/keep-playing.mp3'); // Play lose sound for < 50%
     }
   }, [showResult, score, selectedCountry]);
   return (
