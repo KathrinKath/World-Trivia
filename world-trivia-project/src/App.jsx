@@ -81,19 +81,20 @@ function App() {
       ticks: 60,
       gravity: 0.3,
       colors: [
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#ff00ff",
-        "#00ffff",
-        "#ff0",
-        "#0f0",
-        "#00f",
-        "#f00",
-        "#ff00ff",
-        "#00ffff"
-      ]
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#ff00ff',
+        '#00ffff',
+        '#ff0',
+        '#0f0',
+        '#00f',
+        '#f00',
+        '#ff00ff',
+        '#00ffff',
+      ],
+
     });
     setTimeout(() => {
       container.removeChild(canvas);
@@ -131,9 +132,10 @@ function App() {
       if (percentageScore > 80) {
         playSound("/sounds/game-win.mp3"); // Play win sound for > 80%
       } else if (percentageScore < 50) {
+
         playSound("/sounds/lose-sound.mp3"); // Play sound with 50% point or less
       } else playSound("/sounds/keep-playing.mp3"); // Play lose sound for < 50% and > 80%
-    }
+   }
   }, [showResult, score, selectedCountry]);
   return (
     <div className="container">
