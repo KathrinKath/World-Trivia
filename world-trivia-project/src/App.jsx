@@ -20,6 +20,7 @@ function App() {
     const audio = new Audio(soundFile);
     audio.play();
   };
+
   function handleCountryChange(e) {
     setSelectedCountry(e.target.value);
     setCurrentQuestionIndex(0);
@@ -54,7 +55,7 @@ function App() {
       } else {
         setShowResult(true);
       }
-    }, 10000); // 10 seconds delay so he user can see the correct answers explanation.
+    }, 10000); // 10 seconds delay so the user can see the correct answer explanation.
   }
 
   function triggerConfetti() {
@@ -67,7 +68,7 @@ function App() {
 
     const confettiInstance = confetti.create(canvas, {
       resize: true,
-      useWorker: true
+      useWorker: true,
     });
 
     confettiInstance({
@@ -87,8 +88,8 @@ function App() {
         "#00f",
         "#f00",
         "#ff00ff",
-        "#00ffff"
-      ]
+        "#00ffff",
+      ],
     });
 
     setTimeout(() => {
@@ -103,6 +104,7 @@ function App() {
     setShowResult(false);
     setClicked(false);
   }
+
   // Play sound effect when userAnswer changes
   useEffect(() => {
     if (userAnswer) {
@@ -182,6 +184,7 @@ function App() {
                 .question
             }
           </h2>
+
           <div className="options-grid">
             {countriesData[selectedCountry].questions[
               currentQuestionIndex
@@ -205,7 +208,7 @@ function App() {
                   onClick={function () {
                     handleAnswerClick(option);
                   }}
-                  className={buttonClass} // Use className instead of style
+                  className={buttonClass}
                   disabled={clicked}
                 >
                   {option}
@@ -213,6 +216,7 @@ function App() {
               );
             })}
           </div>
+
           {userAnswer && (
             <div>
               <p
@@ -220,15 +224,15 @@ function App() {
                   userAnswer ===
                   countriesData[selectedCountry].questions[currentQuestionIndex]
                     .correctAnswer
-                    ? "correct-answer-p" // Apply class for correct answer
+                    ? "correct-answer-p"
                     : "incorrect-answer-p"
-                } // Apply class for incorrect answer
+                }
               >
                 {userAnswer ===
                 countriesData[selectedCountry].questions[currentQuestionIndex]
                   .correctAnswer
-                  ? "Correct!" // Text for correct answer
-                  : "Wrong!"}{" "}
+                  ? "Correct!"
+                  : "Wrong!"}
               </p>
               <p className="answerExplanation">
                 Explanation:{" "}
