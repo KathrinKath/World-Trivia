@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 footer {
-  position: absolute;
-  width: 70%;
+  position: relative; /*  I Changed from absolute to relative for better responsive control */
+  width: 100%; /* Full width */
   background-color: #3586ff;
-  min-height: 200px; /* Maintain a minimum height for the footer */
+  min-height: 200px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
@@ -12,11 +12,11 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   margin-top: 200px;
+  box-sizing: border-box;
 }
 
 footer .social_icon,
 footer .menu {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,7 @@ footer .wave {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(../images/wave.png); /* Update the path to your wave image */
+  background: url(../images/wave.png);
   background-size: 1000px 100px;
 }
 
@@ -115,5 +115,38 @@ footer .wave#wave4 {
   }
   100% {
     background-position-x: 1000px;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 30px; /* Reduced padding for smaller screens */
+    min-height: 150px; /* Adjusted height */
+  }
+
+  footer .social_icon li a,
+  footer .menu li a {
+    font-size: 1.5em; /* Smaller icon size */
+    margin: 0 8px; /* Reduced margin */
+  }
+
+  footer p {
+    font-size: 1em; /* Smaller text size */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 10px 20px; /* More compact padding */
+  }
+
+  footer .social_icon li a,
+  footer .menu li a {
+    font-size: 1.2em; /* Further reduced icon size */
+  }
+
+  footer p {
+    font-size: 0.9em; /* Further reduced text size */
   }
 }
