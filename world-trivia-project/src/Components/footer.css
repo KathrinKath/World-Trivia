@@ -151,3 +151,26 @@ footer .wave#wave4 {
     font-size: 0.9em; /* Further reduced text size */
   }
 }
+
+/*  icons in here  */
+.footer-icon {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-icon a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Default state of the icons */
+.icon-hover svg {
+  color: #e1dad8; /* Default color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.icon-hover:hover svg {
+  color: #00bfff; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
