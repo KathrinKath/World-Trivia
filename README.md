@@ -24,6 +24,7 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 - 📑 Score tracking: Your score is updated in real time after each question.
 - 🔉 Sound effects: Audio cues for correct, incorrect answers, and game completion.
 - 🎊 Confetti effects: Correct answers trigger confetti to celebrate your success.
+- 🔜 Skip question: You can skip questions or skip the explanation any time.
 - 📊 Final score display: The game shows your score out of the total questions.
 - 🔁 Play again feature: Restart the game anytime by clicking the "Play Again" button.
 
@@ -50,6 +51,7 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
 - **React:** Core library for building user interfaces.
   - npm install react react-dom
 - **Font Awesome:** To use icons from the Font Awesome library.
+
   - npm install font-awesome
   - npm install @fortawesome/free-brands-svg-icons
 
