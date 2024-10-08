@@ -259,7 +259,7 @@ function App() {
             Your Score: {score} /{" "}
             {countriesData[selectedCountry].questions.length}
           </h2>
-          <button onClick={handleRestart}>
+          <button onClick={handleRestart} className="playAgainButton">
             <i className="fa fa-refresh"></i> Play Again
           </button>
         </div>
