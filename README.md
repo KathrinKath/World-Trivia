@@ -51,6 +51,8 @@ Welcome to the World Trivia Game, where you can test your knowledge of different
   - npm install react react-dom
 - **Font Awesome:** To use icons from the Font Awesome library.
   - npm install font-awesome
+  - npm install @fortawesome/free-brands-svg-icons
+
 - **Canvas Confetti:** For the confetti effect after correct answers.
   - npm install canvas-confetti
 
