@@ -5,6 +5,12 @@ import "./App.css";
 import "font-awesome/css/font-awesome.min.css"; // Import Font Awesome
 import Navbar from "../src/Components/navbar"; // Import the Navbar component
 import useTimer from "./Components/useTimer"; // Import the Timer (Test)
+import errorSound from "/public/error.mp3";
+import gameWinSound from "/public/game-win.mp3";
+import keepPlayingSound from "/public/keep-playing.mp3";
+import loseSound from "/public/lose-sound.mp3";
+import winSound from "/public/win.mp3";
+
 function App() {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -116,9 +122,9 @@ function App() {
         countriesData[selectedCountry].questions[currentQuestionIndex]
           .correctAnswer
       ) {
-        playSound("/sounds/win.mp3"); // Correct sound file path
+        playSound(winSound); // Correct sound file path
       } else {
-        playSound("/sounds/error.mp3"); // Wrong sound file path
+        playSound(errorSound); // Wrong sound file path
       }
     }
   }, [userAnswer, selectedCountry, currentQuestionIndex]);
@@ -130,10 +136,10 @@ function App() {
       const percentageScore = (score / totalQuestions) * 100; // Calculate percentage
 
       if (percentageScore > 80) {
-        playSound("/sounds/game-win.mp3"); // Play win sound for > 80%
+        playSound(gameWinSound); // Play win sound for > 80%
       } else if (percentageScore < 50) {
-        playSound("/sounds/lose-sound.mp3"); // Play sound with 50% point or less
-      } else playSound("/sounds/keep-playing.mp3"); // Play lose sound for < 50% and > 80%
+        playSound(loseSound); // Play sound with 50% point or less
+      } else playSound(keepPlayingSound); // Play lose sound for < 50% and > 80%
     }
   }, [showResult, score, selectedCountry]);
 
