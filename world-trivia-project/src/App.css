@@ -26,8 +26,8 @@ h1 {
 .selectCountryLabel {
   font-size: 2.2rem;
   margin: 0.5rem;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #49ff18,
-    -21px -40px 10px rgba(206, 89, 55, 0);
+  /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #49ff18,
+    -21px -40px 10px rgba(206, 89, 55, 0); */
 }
 .selectCountry {
   font-size: 1rem;
@@ -179,8 +179,8 @@ button:hover {
   }
   50% {
     text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-      #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px,
-      #ff2d95 0px 0px 50px, #ff2d95 0px 0px 75px; /* Full glow at 50% */
+      #0479ff 0px 0px 20px, #2de6ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
+      #874df3 0px 0px 50px, #2d88ff 0px 0px 75px; /* Full glow at 50% */
   }
   100% {
     text-shadow: none; /* Return to normal text at the end */
