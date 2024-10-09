@@ -34,13 +34,14 @@
 // export default Footer;
 
 // ---------------------------------
+
+// ? Fardin
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faFacebook,
   faLinkedin,
-  faTwitter,
+  faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
