@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 @import "font-awesome/css/font-awesome.min.css";
 
+/* ~ Kathrin - General styling of the game (main section) */
 #root {
   max-width: 90rem;
   margin: 0 auto;
@@ -20,14 +21,42 @@ h1 {
   animation: glow 20s ease-in-out infinite; /* Animates the glow over 20 seconds */
   margin: -0.6rem 0;
 }
+/* Style the select element */
+select {
+  background-color: #4c00ff;
+  font-family: Merriweather;
+  padding: 1rem;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  border: 0.2rem solid #ffffff;
+}
+select:hover {
+  background-color: #3c3b3d;
+  border: 0.2rem solid #ffffff;
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+select option {
+  color: #ffffff;
+}
+select option:hover {
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+select option:checked {
+  background-color: #007bff; /* Change the background of the selected option */
+  color: white; /* Change the color of the selected option */
+}
 .chosenCountry {
   font-size: 4rem;
 }
 .selectCountryLabel {
   font-size: 2.2rem;
   margin: 0.5rem;
-  /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #49ff18,
-    -21px -40px 10px rgba(206, 89, 55, 0); */
+  text-shadow: 0 0 5px #fff, 0 0 20px #4c00ff;
 }
 .selectCountry {
   font-size: 1rem;
@@ -117,11 +146,29 @@ button:hover {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+.skipQuestionButton {
+  margin-top: 2rem;
+}
+.skipQuestionButton:hover {
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.skipQuestionButton i {
+  font-size: 1.5rem;
+}
 .finalScoresTitle {
   font-size: 2rem;
 }
-/* Navbar is here */
+.playAgainButton:hover {
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
 
+/* ? Fardin - Navbar is here */
 /* Navbar.css */
 .navbar {
   align-items: center;
@@ -148,18 +195,8 @@ button:hover {
   margin-top: 1rem;
   border: #0a021d solid 3px;
 }
-.skipQuestionButton {
-  margin-top: 2rem;
-}
-.skipQuestionButton:hover {
-  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
-    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
-    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
-    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-}
-.skipQuestionButton i {
-  font-size: 1.5rem;
-}
+
+/* Animations */
 @keyframes slideIn {
   from {
     transform: translateX(-50%);
@@ -190,9 +227,8 @@ button:hover {
     text-shadow: none; /* No shadow at the start */
   }
   50% {
-    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-      #0479ff 0px 0px 20px, #2de6ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
-      #874df3 0px 0px 50px, #2d88ff 0px 0px 75px; /* Full glow at 50% */
+    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #0479ff 0px 0px 20px,
+      #2de6ff 0px 0px 30px, #2dd5ff 0px 0px 40px, #874df3 0px 0px 50px; /* Full glow at 50% */
   }
   100% {
     text-shadow: none; /* Return to normal text at the end */

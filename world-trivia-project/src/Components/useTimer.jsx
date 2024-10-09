@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+// ! Gerardo
 const useTimer = (initialTime, isRunning, onTimeout) => {
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
