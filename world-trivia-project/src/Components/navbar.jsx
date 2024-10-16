@@ -1,6 +1,7 @@
 import "../App.css";
 import logo from "/public/logo.gif";
 
+// ? Fardin
 const Navbar = () => {
   return (
     <nav className="navbar">

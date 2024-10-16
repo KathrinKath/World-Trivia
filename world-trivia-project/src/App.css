@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 @import "font-awesome/css/font-awesome.min.css";
 
+/* ~ Kathrin - General styling of the game (main section) */
 #root {
   max-width: 90rem;
   margin: 0 auto;
@@ -166,8 +167,8 @@ button:hover {
     12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
     -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
-/* Navbar is here */
 
+/* ? Fardin - Navbar is here */
 /* Navbar.css */
 .navbar {
   align-items: center;
@@ -195,6 +196,7 @@ button:hover {
   border: #0a021d solid 3px;
 }
 
+/* Animations */
 @keyframes slideIn {
   from {
     transform: translateX(-50%);
